@@ -3,6 +3,10 @@ const app = express();
 
 const users = require('./MOCK_DATA.json');
 
+app.set('view engine', 'ejs');
+app.get('/', (req, res) => {
+  res.render('index');
+});
 
 app.get('/users', (req, res) => {
     const html = `
